@@ -1,6 +1,6 @@
 ---
 emoji: ❕
-title: [알고리즘 공부] PS의 의미와 시간복잡도
+title: 알고리즘 공부- PS의 의미와 시간복잡도
 date: '2022-07-07 00:00:00'
 author: 데브업
 tags: 알고리즘 Algorithm PS
