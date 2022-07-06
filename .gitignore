@@ -20,6 +20,7 @@ node_modules/
 # gatsby files
 .cache/
 public
+zoomkoding content/
 
 # Mac files
 .DS_Store
