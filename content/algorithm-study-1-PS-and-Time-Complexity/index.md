@@ -1,6 +1,6 @@
 ---
-emoji: ❕
-title: 알고리즘 공부- PS의 의미와 시간복잡도
+emoji: 📰
+title: 알고리즘 공부 - PS의 의미와 시간복잡도
 date: '2022-07-07 00:00:00'
 author: 데브업
 tags: 알고리즘 Algorithm PS
@@ -43,9 +43,9 @@ categories: 알고리즘
 
 ### 이게 왜 필요하지? 개발에 도움이 되긴할까?
 
-라는 생각이 든다면, 유튜브에서 스타트링크를 검색해 재생목록에서 첫번째 두번째 startlink.live를 들어보길 바란다.  
-(스타트링크는 BOJ를 운영햐는 회사이다)
-![스타트링크](./startlink_capture.png)
+라는 생각이 든다면, 유튜브에서 스타트링크를 검색해 재생목록에서 첫번째 두번째 startlink.live를 들어보길 바란다. (스타트링크는 BOJ를 운영햐는 회사이다)
+
+[![스타트링크](./startlink_capture.png)](https://www.youtube.com/c/StartlinkIo/playlists)
 
 ## ⏱️ 시간 복잡도
 
@@ -82,29 +82,30 @@ categories: 알고리즘
 
 #### 함수에서 가장 중요한 정보
 
-- $f(x)=x^2+5x$, $g(x)=27x$
+- <img align="left" src="https://latex.codecogs.com/svg.image?f(x)=x^2+5x,&space;g(x)=27x" style="background-color:#FFFFFF;"/><br>
 
-  - $x=1$:$f(x)=6$,$g(x)=27$
-  - $x=10$:$f(x)=150$,$g(x)=270$
-  - $x=100$:$f(x)=10500$,$g(x)=2700$
-  - $x=1000$:$f(x)=1005000$,$g(x)=27000$
-  - ![f(x)와g(x)의 그래프](./geogebra1.png)
-  - 입력의 크기 $x$ 가 커질수록 연산의 횟수를 증가함
-  - 위 그림처럼 특정 값 이후부터는 항상 $f(x)가 g(x)$ 보다 크다. 입력의 크기가 커질수록 $f(x)=x^2+5x보다 g(x)=27x가$ 더 적은 연산을 필요로 한다.
+  - x=1 : f(x)=6, g(x)=27
+  - x=10 : f(x)=150, g(x)=270
+  - x=100 : f(x)=10500, g(x)=2700
+  - x=1000 : f(x)=1005000, g(x)=27000
+
+  - 입력의 크기 x 가 커질수록 연산의 횟수를 증가함
+  - 아래 그림처럼 특정 값 이후부터는 항상 f(x)가 g(x) 보다 크다. 입력의 크기가 커질수록 f(x)보다 g(x)가 더 적은 연산을 필요로 한다.
+  - ![f(x)와 g(x)의 그래프](./geogebra1.png)
 
 - 위 내용을 좀 더 수학적으로 나타내보면
 
-  - $x$ 가 적당히 큰 수라면 $f(x)>g(x)$ 를 만족함
-  - $\Rightarrow x > x_{0}$ 이면 항상 $f(x)>g(x)$ 를 만족함
-  - 입력이 커질수록 $g(x)$ 가 더 좋은 복잡도이다.
+  - x 가 적당히 큰 수라면 f(x) > g(x) 를 만족함
+  - <img src="https://latex.codecogs.com/svg.image?x>&space;x_{0}" style="background-color:#FFFFFF; display:inline;"/> 이면 항상 f(x) > g(x) 를 만족함
+  - 입력이 커질수록 g(x) 가 더 좋은 복잡도이다
 
 - 같은 원리로
   - 다항 함수: 최고차항의 차수가 중요
-    - ex) $f(x)=x^2+5x, g(x)=27x$
-    - $x>22$ 이면 항상 $f(x)>g(x)$
+    - ex) <img src="https://latex.codecogs.com/svg.image?f(x)=x^2+5x,&space;g(x)=27x" style="background-color:#FFFFFF; display:inline"/>
+    - x > 22 이면 항상 f(x) > g(x)
   - 지수 함수는 밑의 최댓값이 중요
-    - ex) $f(x)=3^x+x-10, g(x)=2^x+x^3+5x$
-    - $x>4.6$ 이면 항상 $f(x)>g(x)$
+    - ex) <img src="https://latex.codecogs.com/svg.image?f(x)=3^x+x-10, g(x)=2^x+x^3+5x" style="background-color:#FFFFFF; display:inline"/>
+    - x > 4.6 이면 항상 f(x) > g(x)
   - 최고차항의 차수나 밑의 최댓값이 큰 함수가 더 크다.(=더 많은 연산을 필요로 한다.)
   - 지수 함수 vs 다항함수일 경우 지수함수가 더 크다
   - 우리는 최대한 다항식으로 동작하는 알고리즘을 찾아야 하고, 그중에서도 차수가 작은 알고리즘을 찾는 것이 중요!!
@@ -113,50 +114,55 @@ categories: 알고리즘
 
 #### Big-O Notation
 
-방금 전 위에서 말했던 내용을 수학적으로 나타낸 것이 Big-O 표기법이다.
+- 방금 전 위에서 말했던 내용을 수학적으로 나타낸 것이 Big-O 표기법이다.
 
-- $f(x) \in O(g(x))$
+- <img src="https://latex.codecogs.com/svg.image?f(x) \in O(g(x))" style="background-color:#FFFFFF; display:inline"/>
 
-  - 어떤 실수 $x_{0}$ 와 양의 실수 $c$ 가 있어서
-  - $x > x_{0}$ 을 만족하는 모든 $x$ 에 대해
-  - $f(x) \le cg(x)$ 를 만족한다.
-    위 조건을 뜯어보자
+  - 어떤 실수 <img src="https://latex.codecogs.com/svg.image?x_{0}" style="background-color:#FFFFFF; display:inline;"/> 와 양의 실수 c 가 있어서
+  - <img src="https://latex.codecogs.com/svg.image?x>&space;x_{0}" style="background-color:#FFFFFF; display:inline;"/> 을 만족하는 모든 x 에 대해
+  - <img src="https://latex.codecogs.com/svg.image?f(x) \le cg(x)" style="background-color:#FFFFFF; display:inline;"/> 를 만족한다.
+  - 위 조건을 뜯어보자
 
-- 어떤 실수 $x_{0}$ 보다 큰 모든 $x$
-  - $x$ 가 한 없이 커지면 항상 부등호가 성립
-- 어떤 양의 실수 $c$
-  - 최고차항의 계수 무시(=어떤 함수의 상수배는 무시를 한다)
+- 어떤 실수 <img src="https://latex.codecogs.com/svg.image?x_{0}" style="background-color:#FFFFFF; display:inline;"/> 보다 큰 모든 <img src="https://latex.codecogs.com/svg.image?x" style="background-color:#FFFFFF; display:inline;"/>
+  - x 가 한 없이 커지면 항상 부등호가 성립
+- 어떤 양의 실수 c
+  - 최고차항의 계수 무시 (=어떤 함수의 상수배는 무시를 한다)
   - 결국엔 최고차항의 차수와 지수 항의 밑이 중요함
 - Big-O Notation의 의미
-  - $f(x)$ 가 아무리 빨리 증가해도
-  - `최대` $g(x)$ 에 비례하는 수준으로 증가한다.
-  - $f(x)$ 의 `상계`를 나타냄
+  - f(x)가 아무리 빨리 증가해도
+  - `최대` g(x)에 비례하는 수준으로 증가한다.
+  - f(x)의 `상계`를 나타냄
   - 예를 들어보자
-    - $f(x)=2^x+10x+5, g(x)=2^x$
-      - $x_{0}=7, c=2$ 이면 $2^x+10x+5 \le 2 * 2^x : 2^x+10x+5 \in O(2^x)$
-      - ![f(x)와 c*g(x)의 그래프와 교점](./geogebra2.png)
-      - $f(x)와 c*g(x)$ 의 교점은 6.0287...이다. 따라서 $x_{0}=7$ 보다 큰 $x$ 에 대해서 $g(x)가 항상 f(x)보다 크다.$
+    - <img src="https://latex.codecogs.com/svg.image?f(x)=2^x+10x+5, g(x)=2^x" style="background-color:#FFFFFF; display:inline;"/>
+    - <img src="https://latex.codecogs.com/svg.image?x\_{0}=7, c=2" style="background-color:#FFFFFF; display:inline;"/> 이면 <img src="https://latex.codecogs.com/svg.image?2^x+10x+5 \le 2 \times 2^x : 2^x+10x+5 \in O(2^x)" style="background-color:#FFFFFF; display:inline;"/>
+    - ![f(x)와 c*g(x)의 그래프와 교점](./geogebra2.png)
+    - f(x)와 c\*g(x) 의 교점은 6.0287...이다. 따라서 <img src="https://latex.codecogs.com/svg.image?&space;x_{0}=7" style="background-color:#FFFFFF; display:inline;"/> 보다 큰 x 에 대해서 g(x)가 항상 f(x)보다 크다.
 
 #### Big-Omega Notation
 
-Big-O Notation과 반대로 함수의 `하계`를 나타낸다
+- Big-O Notation과 반대로 함수의 `하계`를 나타낸다
 
-- $f(x) \in Omega(g(x))$
-  - 어떤 실수 $x_{0}$ 와 양의 실수 $c$ 가 있어서
-  - $x > x_{0}$ 을 만족하는 모든 $x$ 에 대해
-  - $f(x) \ge cg(x)$ 를 만족한다.
+- <img src="https://latex.codecogs.com/svg.image?f(x) \in \Omega(g(x))" style="background-color:#FFFFFF; display:inline;"/><br>
+  - 어떤 실수 <img src="https://latex.codecogs.com/svg.image?x_{0}" style="background-color:#FFFFFF; display:inline;"/> 와 양의 실수 c 가 있어서
+  - <img src="https://latex.codecogs.com/svg.image?x>&space;x_{0}" style="background-color:#FFFFFF; display:inline;"/> 을 만족하는 모든 x 에 대해
+  - <img src="https://latex.codecogs.com/svg.image?f(x) \ge cg(x)" style="background-color:#FFFFFF; display:inline;"/> 를 만족한다.
 
 #### Big-Theta Notation
 
-상계와 하계의 교집합(Tight Bound)
-
-- $f(x) \in \Theta(g(x)) \Leftrightarrow f(x) \in O(g(x)) \wedge f(x) \in Omega(g(x))$
+- 상계와 하계의 교집합(Tight Bound)
+- <img src="https://latex.codecogs.com/svg.image?f(x) \in \Theta(g(x)) \Leftrightarrow f(x) \in O(g(x)) \wedge f(x) \in \Omega(g(x))" style="background-color:#FFFFFF; display:inline;"/>
 
 #### 극한을 이용한 표현
 
-- $f(x) \in O(g(x)) \Leftrightarrow \displaystyle \lim_{x \to \infty} \frac{f(x)}{g(x)}=c$ 로 수렴
-- $f(x) \in Omega(g(x)) \Leftrightarrow \displaystyle \lim_{x \to \infty} \frac{f(x)}{g(x)}>0$
-- $f(x) \in \Theta(g(x)) \Leftrightarrow \displaystyle \lim_{x \to \infty} \frac{f(x)}{g(x)}=c$ 로 수렴 (단,$c>0$)
+- <img src="https://latex.codecogs.com/svg.image?f(x)&space;\in&space;O(g(x))&space;\Leftrightarrow&space;\displaystyle&space;\lim_{x&space;\to&space;\infty}&space;\frac{f(x)}{g(x)}=c" style="background-color:#FFFFFF; display:inline; vertical-align:middle"/> 로 수렴
+- <img src="https://latex.codecogs.com/svg.image?f(x)&space;\in&space;\Omega(g(x))&space;\Leftrightarrow&space;\displaystyle&space;\lim_{x&space;\to&space;\infty}&space;\frac{f(x)}{g(x)}>0" style="background-color:#FFFFFF; display:inline; vertical-align:middle"/>
+- <img src="https://latex.codecogs.com/svg.image?f(x)&space;\in&space;\Theta(g(x))&space;\Leftrightarrow&space;\displaystyle&space;\lim_{x&space;\to&space;\infty}&space;\frac{f(x)}{g(x)}=c" style="background-color:#FFFFFF; display:inline; vertical-align:middle"/> 로 수렴 (단, c > 0)
+
+<!--
+참고 사이트
+https://github.com/zeuseyera/Markdown_TongDal-kr
+https://latex.codecogs.com/
+-->
 
 ```toc
 
