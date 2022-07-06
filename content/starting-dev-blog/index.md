@@ -3,8 +3,8 @@ emoji: 🖐
 title: 개발 블로그를 시작하며
 date: '2022-07-06 08:00:00'
 author: DevupKim
-tags: blog
-categories: blog
+tags: blog 블로그
+categories: 블로그 featured
 ---
 
 ## 1. 소개
